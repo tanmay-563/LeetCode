@@ -1,7 +1,8 @@
-/*You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
-
+/*You are given a large integer represented as an integer array digits,
+where each digits[i] is the ith digit of the integer. 
+The digits are ordered from most significant to least significant in left-to-right order.
+The large integer does not contain any leading 0's.
 Increment the large integer by one and return the resulting array of digits.
-
  */
 class Solution {
 public:
@@ -23,3 +24,16 @@ public:
             return digits;
         }
 };
+/* Here there is no need to push each elemet one by one till the last you can,
+Directly assign everything as zero because no such case exists.....
+        if (carry>0){
+            digits.push_back(0);
+            int n = digits.size();
+            for(int i=n-1; i>0; i--) {
+                digits[i]=0;                 <<<--------
+            }
+            digits[0]=carry;}
+            return digits;
+        }
+};
+*/
